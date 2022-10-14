@@ -1,0 +1,16 @@
+<view>
+    <image webp="ture" class='background' src="https://s2.loli.net/2022/10/14/syvGLnWltjerZRk.jpg" mode="aspectFill"></image>
+    <view class="animated bounceInDown">请选择游戏模式</view>
+    <view class="btn-1 circle-1" bindtap="goToTwoPeople">
+        <button class="minimal entergame rubberBand animated_1">本地对战</button>
+    </view>
+    <view class="btn-2 circle-2" bindtap="goToComputer_People">
+        <button class="minimal enterpcgame rubberBand animated_1">人机对战</button>
+    </view>
+    <view class="btn-3 circle-3" bindtap="goToBegin_Game">
+        <button class="minimal return rubberBand animated_1">返回</button>
+    </view>
+</view>
+
+
+

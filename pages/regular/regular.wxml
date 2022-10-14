@@ -1,0 +1,7 @@
+<!--pages/regular/regular.wxml-->
+<view>
+    <image class="img" src="/images/regular/01.初始盘面.jpg"></image>
+    <image class="img" src="/images/regular/02.轮流掷骰.jpg"></image>
+    <image class="img" src="/images/regular/03.消除规则.jpg"></image>
+    <image class="img" src="/images/regular/04.结算规则.jpg"></image>
+</view>

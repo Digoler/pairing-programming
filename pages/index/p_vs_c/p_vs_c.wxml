@@ -1,0 +1,206 @@
+<!--在九宫格各种上显示对应的骰子-->
+<template name="first-1">
+    <view class="box first-1">
+          <span class="pip-1"></span>
+    </view>
+</template>
+
+<template name="second-1">
+    <view class="box second-1">
+          <span class="pip-1"></span>
+          <span class="pip-1"></span>
+    </view>
+</template>
+
+<template name="third-1">
+    <view class="box  third-1">
+        <span class="pip-1"></span>
+        <span class="pip-1 third-item-center-1"></span>
+        <span class="pip-1 third-item-end"></span>
+    </view>
+</template>
+
+<template name="fourth-1">
+    <view class="box fourth-1">
+            <span class="pip-1 id-1"></span>
+            <span class="pip-1 id-2"></span>
+            <span class="pip-1 id-3"></span>
+            <span class="pip-1 id-4"></span>
+    </view>
+</template>
+
+<template name="fifth-1">
+    <view class="box fifth-1">
+            <span class="pip-1 id-5"></span>
+            <span class="pip-1 id-6"></span>
+            <span class="pip-1 id-7"></span> 
+            <span class="pip-1 id-8"></span>
+            <span class="pip-1 id-9"></span>
+    </view>
+</template>
+
+<template name="sixth-1">
+    <view class="box sixth-1">
+            <span class="pip-1 id-10"></span>
+            <span class="pip-1 id-11"></span>
+            <span class="pip-1 id-12"></span> 
+            <span class="pip-1 id-13"></span>
+            <span class="pip-1 id-14"></span>
+            <span class="pip-1 id-15"></span>
+    </view>
+</template>
+
+<image webp="ture" class='background' src="https://s2.loli.net/2022/10/14/Jwl2dgBXMmzVLnq.jpg" mode="aspectFill"></image>
+<!--九宫格内骰子的样式-->
+<view class="wrap">
+        <view id="box-1"  bindtap="{{incident.box_1}}">
+            <view style="display: {{box_1}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_1]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-2" bindtap="{{incident.box_2}}">
+            <view style="display: {{box_2}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_2]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-3" bindtap="{{incident.box_3}}">
+            <view style="display: {{box_3}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_3]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-4" bindtap="{{incident.box_4}}">
+            <view style="display: {{box_4}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_4]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-5" bindtap="{{incident.box_5}}">
+            <view style="display: {{box_5}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_5]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-6" bindtap="{{incident.box_6}}">
+            <view style="display: {{box_6}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_6]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-7" bindtap="{{incident.box_7}}">
+            <view style="display: {{box_7}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_7]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-8" bindtap="{{incident.box_8}}">
+            <view style="display: {{box_8}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_8]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-9" bindtap="{{incident.box_9}}">
+            <view style="display: {{box_9}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_9]}}"></template>
+                </block>
+            </view>
+        </view>
+</view>
+
+
+  <!-- 展示视图 -->
+<view class="flex-container">
+        <view class="dice-box">
+        <view class="mask" wx:if="{{show}}"></view>
+        <view class="windows" wx:if="{{show}}">
+        <view class="animated swing">游戏结束</view>
+        <view class="result animated_2 rubberBand">玩家{{winner}}获胜</view>
+        <view class="animated_1 bounceInLeft score">Robot得分：{{score_a}}</view>
+        <view class="animated_1 bounceInLeft score">玩家B得分：{{score_b}}</view>
+        <button class="punch" bindtap="one_more_round">再来一局</button>
+        <button class="punch" bindtap="return_sel">返回</button>
+        </view>
+        <image class="img" src="{{dice_1[num1]}}"  bindtap="shakeClick"></image>
+        <view class="player_a">Robot分数</view>
+        <view class="score_a">{{score_a}}</view>
+        <view class="player_b">玩家B分数</view>
+        <view class="score_b">{{score_b}}</view>
+    </view>
+</view> 
+
+<view class="wrap-1">
+        <view id="box-10"  bindtap="{{incident.box_10}}">
+            <view style="display: {{box_10}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_10]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-11" bindtap="{{incident.box_11}}">
+            <view style="display: {{box_11}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_11]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-12" bindtap="{{incident.box_12}}">
+            <view style="display: {{box_12}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_12]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-13" bindtap="{{incident.box_13}}">
+            <view style="display: {{box_13}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_13]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-14" bindtap="{{incident.box_14}}">
+            <view style="display: {{box_14}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_14]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-15" bindtap="{{incident.box_15}}">
+            <view style="display: {{box_15}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_15]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-16" bindtap="{{incident.box_16}}">
+            <view style="display: {{box_16}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_16]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-17" bindtap="{{incident.box_17}}">
+            <view style="display: {{box_17}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_17]}}"></template>
+                </block>
+            </view>
+        </view>
+        <view id="box-18" bindtap="{{incident.box_18}}">
+            <view style="display: {{box_18}}">
+                <block>
+                    <template is="{{dice_in_nine[showdata.box_18]}}"></template>
+                </block>
+            </view>
+        </view>
+</view>

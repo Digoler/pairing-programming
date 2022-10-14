@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/start/start",
+        "pages/index/index",
+        "pages/shop/shop",
+        "pages/personal/personal",
+        "pages/logs/logs",
+        "pages/index/p_vs_p/twopeple",
+        "pages/index/p_vs_c/p_vs_c",
+        "pages/regular/regular"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#456",
+        "navigationBarTitleText": "一起逍摇骰",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "游戏",
+                "iconPath": "/images/tabs/game-active.png",
+                "selectedIconPath": "/images/tabs/game.png"
+            },
+            {
+                "pagePath": "pages/shop/shop",
+                "text": "商店",
+                "iconPath": "/images/tabs/shop.png",
+                "selectedIconPath": "/images/tabs/shop-active.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "个人中心",
+                "iconPath": "/images/tabs/personal.png",
+                "selectedIconPath": "/images/tabs/personal-active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

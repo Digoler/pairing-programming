@@ -1,0 +1,7 @@
+/* pages/regular/regular.wxss */
+.img{
+    image-rendering:-webkit-optimize-contrast;
+    -ms-interpolation-mode:nearest-neighbor;
+      
+    width: 380px;
+}

@@ -1,0 +1,13 @@
+<view>
+    <image webp="ture" class='background' src="https://s2.loli.net/2022/10/14/agjN8poskxnG6Wq.jpg" mode="aspectFill"></image>
+    <view class="gamename">
+        <view class="animated rubberBand">一起逍摇骰</view>
+    </view>
+    <!-- <image class="img" src="/images/QJ6575261978.jpg"></image> -->
+    <view class="btn" bindtap="goToYouXi">
+        <button class="minimal entergame rubberBand animated">进入游戏</button>
+    </view>
+    <view class="regular" bindtap="goToRegular">
+        <button class="minimal gameregular rubberBand animated">游戏规则</button>
+    </view>
+</view>
